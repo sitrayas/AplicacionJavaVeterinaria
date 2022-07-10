@@ -107,6 +107,12 @@ public class vis_jif_Pacientes extends javax.swing.JInternalFrame {
         btn_actualizar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btn_actualizar.setText("Actualizar");
 
+        cb_especie.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cb_especieActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -282,10 +288,14 @@ public class vis_jif_Pacientes extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txt_buscar_pacienteActionPerformed
 
+    private void cb_especieActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb_especieActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cb_especieActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_actualizar;
-    private javax.swing.JButton btn_buscar_paciente;
+    public javax.swing.JButton btn_buscar_paciente;
     private javax.swing.JButton btn_eliminar;
     public javax.swing.JButton btn_guardar;
     private javax.swing.JButton btn_nuevo;
@@ -303,7 +313,7 @@ public class vis_jif_Pacientes extends javax.swing.JInternalFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     public javax.swing.JTable tabla_pacientes;
-    private javax.swing.JTextField txt_buscar_paciente;
+    public javax.swing.JTextField txt_buscar_paciente;
     public javax.swing.JTextField txt_color;
     public javax.swing.JTextField txt_edad;
     public javax.swing.JTextField txt_fecha_nac;

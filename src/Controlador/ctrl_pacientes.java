@@ -15,15 +15,12 @@ public class ctrl_pacientes implements ActionListener{
     vis_jif_Pacientes pacientes;
     mod_Pacientes conexion = new mod_Pacientes();
     
-   public ctrl_pacientes(vis_jif_Pacientes pacientes) {
+   public ctrl_pacientes(vis_jif_Pacientes pacientes) throws SQLException {
         
         this.pacientes=pacientes;
+        this.pacientes.btn_guardar.addActionListener(this);
         tabla();
         llenarComboEspecies();
-   
-        
-        this.pacientes.btn_guardar.addActionListener(this);
-        
         //this.pacientes.btn_salir.addActionListener(this);
        // this.pacientes.btn_eliminar.addActionListener(this);
         
@@ -44,17 +41,32 @@ public class ctrl_pacientes implements ActionListener{
             boolean datos = conexion.regP();
             
             if (datos==true) {
-                JOptionPane.showMessageDialog(this.pacientes, "Se registro correctamente");
+                JOptionPane.showMessageDialog(pacientes, "Se registro correctamente");
                 tabla();
             }else {
-                JOptionPane.showMessageDialog(this.pacientes, "No se pudo registrar");
+                JOptionPane.showMessageDialog(pacientes, "No se pudo registrar");
             }
-        }
-        if (e.getSource()== this.pacientes.btn_buscar_paciente){
-            
-            
-        
-        }
+        }  
+//           if (e.getSource()== this.pacientes.btn_buscar_paciente){
+//            DefaultTableModel tablapac = (DefaultTableModel) this.pacientes.tabla_pacientes.getModel();
+//            tablapac.setColumnCount(0);
+//            tablapac.setRowCount(0);
+//            tablapac.addColumn("Nombre");
+//            tablapac.addColumn("Edad");
+//            tablapac.addColumn("F.nac");
+//            
+//            ResultSet rs=pacientes.consultarPacientes();
+//            String regP []= new String [3];
+//            
+//            while (rs.next()) {     
+//                
+//                regP[0]=rs.getString("pac_nombre");
+//                regP[1]=rs.getString("pac_edad");
+//                regP[2]=rs.getString("pac_fecha_nac");
+//                tablapac.addRow(regP);
+//            }
+//            
+//        }
        
     }
     
@@ -96,11 +108,11 @@ public class ctrl_pacientes implements ActionListener{
     
     
     
-    public void llenarComboEspecies ()throws SQLException {
+    public void llenarComboEspecies() throws SQLException {
         ResultSet rs = conexion.consultarEspecies();
         
         while ( rs.next()){
-            this.pacientes.cb_especie.addItem(rs.getString("tipo_paciente"));
+            this.pacientes.cb_especie.addItem(rs.getString("pac_especie"));
         }
         
         

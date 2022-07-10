@@ -41,23 +41,25 @@ public class mod_Pacientes {
         }
     } 
     
-        public ResultSet consultarEspecie(){
+        public ResultSet consultarEspecies(){
         try {
             Statement st=conexion.conectarBD().createStatement();
-            String sql ="SELECT pac_nombre, pac_edad, pac_sexo, pac_especie, pac_raza, pac_color, pac_fecha_nac FROM pacientes";
+            String sql ="SELECT pac_nombre, pac_edad, pac_sexo, pac_especie, pac_raza, pac_color, pac_fecha_nac	FROM pacientes;";
             ResultSet rs=st.executeQuery(sql);
             return rs;
         } catch (Exception ex) {
            JOptionPane.showMessageDialog(null, "Error: "+ex);
             return null;
-    }
-    public ResultSet buscarPaciente() throws {
-        try {
-            Statement st=conexion.conectarBD().createStatement();
-            String sql ="SELECT pac_nombre, pac_edad, pac_sexo, pac_especie, pac_raza, pac_color, pac_fecha_nac FROM pacientes";
-            ResultSet rs=st.executeQuery(sql);
-            return rs;
-        } catch (Exception ex) {
-           JOptionPane.showMessageDialog(null, "Error: "+ex);
-            return null;
-}}}
+    
+//    public ResultSet buscarPaciente() throws SQLException {
+//            Statement st=conexion.conectarBD().createStatement();
+//            String sql ="SELECT pac_nombre, pac_edad, pac_sexo, pac_especie, pac_raza, pac_color, pac_fecha_nac FROM pacientes";
+//            ResultSet rs=st.executeQuery(sql);
+//            return rs;
+//            
+//        } catch (Exception ex) {
+//           JOptionPane.showMessageDialog(null, "Error: "+ex);
+//            return null;
+////}
+}
+}}

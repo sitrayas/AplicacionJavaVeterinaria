@@ -8,6 +8,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class ctrl_Principal implements MouseListener, ActionListener {
     vis_Principal principal;
@@ -23,7 +26,11 @@ public class ctrl_Principal implements MouseListener, ActionListener {
     public void mouseClicked(MouseEvent e) {
         if ( e.getSource() == this.principal.lblPacientes ) {
             vis_jif_Pacientes pacientes = new vis_jif_Pacientes();
-            ctrl_pacientes c_pacientes = new ctrl_pacientes(pacientes);
+            try {
+                ctrl_pacientes c_pacientes = new ctrl_pacientes(pacientes);
+            } catch (SQLException ex) {
+                Logger.getLogger(ctrl_Principal.class.getName()).log(Level.SEVERE, null, ex);
+            }
             this.principal.jp_Contenedor.add(pacientes);
             pacientes.setVisible(true);
         }
