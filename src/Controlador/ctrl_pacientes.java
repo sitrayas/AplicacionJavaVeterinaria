@@ -7,6 +7,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
@@ -19,8 +21,10 @@ public class ctrl_pacientes implements ActionListener{
         
         this.pacientes=pacientes;
         this.pacientes.btn_guardar.addActionListener(this);
+        this.pacientes.btn_buscar_paciente.addActionListener(this);
         tabla();
         llenarComboEspecies();
+        
         //this.pacientes.btn_salir.addActionListener(this);
        // this.pacientes.btn_eliminar.addActionListener(this);
         
@@ -47,26 +51,30 @@ public class ctrl_pacientes implements ActionListener{
                 JOptionPane.showMessageDialog(pacientes, "No se pudo registrar");
             }
         }  
-//           if (e.getSource()== this.pacientes.btn_buscar_paciente){
-//            DefaultTableModel tablapac = (DefaultTableModel) this.pacientes.tabla_pacientes.getModel();
-//            tablapac.setColumnCount(0);
-//            tablapac.setRowCount(0);
-//            tablapac.addColumn("Nombre");
-//            tablapac.addColumn("Edad");
-//            tablapac.addColumn("F.nac");
-//            
-//            ResultSet rs=pacientes.consultarPacientes();
-//            String regP []= new String [3];
-//            
-//            while (rs.next()) {     
-//                
-//                regP[0]=rs.getString("pac_nombre");
-//                regP[1]=rs.getString("pac_edad");
-//                regP[2]=rs.getString("pac_fecha_nac");
-//                tablapac.addRow(regP);
-//            }
-//            
-//        }
+           if (e.getSource()== this.pacientes.btn_buscar_paciente){
+               try{ 
+            DefaultTableModel tablapac = (DefaultTableModel) this.pacientes.tabla_pacientes.getModel();
+            tablapac.setColumnCount(0);
+            tablapac.setRowCount(0);
+            tablapac.addColumn("Nombre");
+            tablapac.addColumn("Edad");
+            tablapac.addColumn("F.nac");
+            
+            conexion.nombre = this.pacientes.txt_buscar_paciente.getText();
+            ResultSet rs= conexion.buscarPacientes();
+            String[] regP = new String [3];
+               
+             while (rs.next()) {     
+                regP[0]=rs.getString("pac_nombre");
+                regP[1]=rs.getString("pac_edad");
+                regP[2]=rs.getString("pac_fecha_nac");
+                tablapac.addRow(regP);
+            }
+             } catch (SQLException ex) {
+                   JOptionPane.showMessageDialog(pacientes, " Error a buscar paciente");
+               }
+            
+        }
        
     }
     
