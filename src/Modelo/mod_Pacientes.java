@@ -50,15 +50,27 @@ public class mod_Pacientes {
         } catch (Exception ex) {
            JOptionPane.showMessageDialog(null, "Error: "+ex);
             return null;
-        }}
+        }
+}
     
         public ResultSet buscarPacientes() throws SQLException {
             Statement st=conexion.conectarBD().createStatement();
             String sql ="SELECT pac_nombre, pac_edad, pac_fecha_nac FROM pacientes WHERE pac_nombre LIKE '"+this.nombre+"%'";
             ResultSet rs=st.executeQuery(sql);
             return rs;
-            
+     }
         
+        
+//        public ResultSet eliminar(){
+//        try {
+//            Statement st=conexion.conectarBD().createStatement();
+//            String sql ="DELETE pac_nombre, pac_edad, pac_fecha_nac FROM public.pacientes where pac_nombre LIKE '"+this.nombre+"'";
+//            ResultSet rs=st.executeQuery(sql);
+//            return rs;
+//        } catch (Exception ex) {
+//           JOptionPane.showMessageDialog(null, "Error: "+ex);
+//            return null;
+//        }
+//        }
+}
 
-}
-}

@@ -294,11 +294,11 @@ public class vis_jif_Pacientes extends javax.swing.JInternalFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btn_actualizar;
+    public javax.swing.JButton btn_actualizar;
     public javax.swing.JButton btn_buscar_paciente;
-    private javax.swing.JButton btn_eliminar;
+    public javax.swing.JButton btn_eliminar;
     public javax.swing.JButton btn_guardar;
-    private javax.swing.JButton btn_nuevo;
+    public javax.swing.JButton btn_nuevo;
     public javax.swing.JComboBox<String> cb_especie;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
