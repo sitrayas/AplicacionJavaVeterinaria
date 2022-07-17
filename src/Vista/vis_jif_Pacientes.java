@@ -53,6 +53,7 @@ public class vis_jif_Pacientes extends javax.swing.JInternalFrame {
         jLabel9 = new javax.swing.JLabel();
         txt_buscar_paciente = new javax.swing.JTextField();
         btn_buscar_paciente = new javax.swing.JButton();
+        btn_seleccionar_paciente = new javax.swing.JButton();
 
         setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         setClosable(true);
@@ -216,6 +217,8 @@ public class vis_jif_Pacientes extends javax.swing.JInternalFrame {
 
         btn_buscar_paciente.setText("Buscar");
 
+        btn_seleccionar_paciente.setText("Select");
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -227,7 +230,9 @@ public class vis_jif_Pacientes extends javax.swing.JInternalFrame {
                     .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(23, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(27, 27, 27)
+                .addComponent(btn_seleccionar_paciente)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel9)
                 .addGap(18, 18, 18)
                 .addComponent(txt_buscar_paciente, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -244,7 +249,8 @@ public class vis_jif_Pacientes extends javax.swing.JInternalFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel9)
                     .addComponent(txt_buscar_paciente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btn_buscar_paciente))
+                    .addComponent(btn_buscar_paciente)
+                    .addComponent(btn_seleccionar_paciente))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 363, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
@@ -299,6 +305,7 @@ public class vis_jif_Pacientes extends javax.swing.JInternalFrame {
     public javax.swing.JButton btn_eliminar;
     public javax.swing.JButton btn_guardar;
     public javax.swing.JButton btn_nuevo;
+    public javax.swing.JButton btn_seleccionar_paciente;
     public javax.swing.JComboBox<String> cb_especie;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

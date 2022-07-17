@@ -24,6 +24,7 @@ public class ctrl_pacientes implements ActionListener{
         this.pacientes.btn_buscar_paciente.addActionListener(this);
         //this.pacientes.btn_salir.addActionListener(this);
         this.pacientes.btn_eliminar.addActionListener(this);
+        this.pacientes.btn_seleccionar_paciente.addActionListener(this);
         tabla();
         llenarComboEspecies();
     }
@@ -72,6 +73,21 @@ public class ctrl_pacientes implements ActionListener{
                    JOptionPane.showMessageDialog(pacientes, " Error a buscar paciente");
                }
             
+               }else if (e.getSource()==this.pacientes.btn_seleccionar_paciente){
+                  if (this.pacientes.tabla_pacientes.getSelectedRowCount () == 1){
+                     int fila= this.pacientes.tabla_pacientes.getSelectedRow();
+                    // this.pacientes.tabla_pacientes.getValueAt(fila,0).toString ();
+                    pacientes.txt_nombre.setText(this.pacientes.tabla_pacientes.getValueAt(fila,0).toString());
+                   pacientes.txt_edad.setText(this.pacientes.tabla_pacientes.getValueAt(fila,1).toString());
+                   pacientes.txt_sexo.setText(this.pacientes.tabla_pacientes.getValueAt(fila,2).toString());
+                   //pacientes.txt_especie.setText(this.pacientes.tabla_pacientes.getValueAt(fila,0).toString());
+                   pacientes.txt_raza.setText(this.pacientes.tabla_pacientes.getValueAt(fila,4).toString());
+                   pacientes.txt_color.setText(this.pacientes.tabla_pacientes.getValueAt(fila,5).toString());
+                   pacientes.txt_fecha_nac.setText(this.pacientes.tabla_pacientes.getValueAt(fila,6).toString());
+                  
+                  }
+               }
+           }
 //        }
 //            if (e.getSource()== this.pacientes.btn_eliminar){
 //               try{ 
@@ -102,9 +118,7 @@ public class ctrl_pacientes implements ActionListener{
 //             } catch (SQLException ex) {
 //                   JOptionPane.showMessageDialog(pacientes, " Error a eliminar paciente");
 //             }
-            }
-       
-    }
+            
     
     public void tabla(){
                 try {
