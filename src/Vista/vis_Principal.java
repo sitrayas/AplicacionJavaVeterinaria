@@ -34,7 +34,7 @@ public class vis_Principal extends javax.swing.JFrame {
         lblTitulo = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         lblPacientes = new javax.swing.JLabel();
-        lblClientes = new javax.swing.JLabel();
+        lblCliente = new javax.swing.JLabel();
         lblMedicinas = new javax.swing.JLabel();
         lblConfiguración = new javax.swing.JLabel();
         lblReportes = new javax.swing.JLabel();
@@ -73,9 +73,10 @@ public class vis_Principal extends javax.swing.JFrame {
         lblPacientes.setText("   Pacientes");
         lblPacientes.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        lblClientes.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
-        lblClientes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/src/icons8-user-30.png"))); // NOI18N
-        lblClientes.setText("   Clientes");
+        lblCliente.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        lblCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/src/icons8-user-30.png"))); // NOI18N
+        lblCliente.setText("   Clientes");
+        lblCliente.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         lblMedicinas.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         lblMedicinas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/src/icons8-pills-24.png"))); // NOI18N
@@ -110,7 +111,7 @@ public class vis_Principal extends javax.swing.JFrame {
                             .addGroup(jPanel3Layout.createSequentialGroup()
                                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(lblPacientes, javax.swing.GroupLayout.PREFERRED_SIZE, 272, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(lblClientes, javax.swing.GroupLayout.PREFERRED_SIZE, 272, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(lblCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 272, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(0, 0, Short.MAX_VALUE))))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(27, 27, 27)
@@ -125,7 +126,7 @@ public class vis_Principal extends javax.swing.JFrame {
                 .addGap(28, 28, 28)
                 .addComponent(lblPacientes)
                 .addGap(27, 27, 27)
-                .addComponent(lblClientes)
+                .addComponent(lblCliente)
                 .addGap(26, 26, 26)
                 .addComponent(lblMedicinas)
                 .addGap(29, 29, 29)
@@ -225,7 +226,7 @@ public class vis_Principal extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     public javax.swing.JPanel jp_Contenedor;
     public javax.swing.JLabel lblCerrarSesion;
-    public javax.swing.JLabel lblClientes;
+    public javax.swing.JLabel lblCliente;
     public javax.swing.JLabel lblConfiguración;
     public javax.swing.JLabel lblMedicinas;
     public javax.swing.JLabel lblPacientes;
