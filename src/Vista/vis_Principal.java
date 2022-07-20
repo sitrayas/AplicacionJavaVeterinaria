@@ -81,6 +81,7 @@ public class vis_Principal extends javax.swing.JFrame {
         lblMedicinas.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         lblMedicinas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/src/icons8-pills-24.png"))); // NOI18N
         lblMedicinas.setText("    Medicinas");
+        lblMedicinas.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         lblConfiguración.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         lblConfiguración.setIcon(new javax.swing.ImageIcon(getClass().getResource("/src/icons8-settings-30.png"))); // NOI18N
@@ -89,6 +90,7 @@ public class vis_Principal extends javax.swing.JFrame {
         lblReportes.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         lblReportes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/src/icons8-graph-report-30.png"))); // NOI18N
         lblReportes.setText("   Reportes");
+        lblReportes.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         lblCerrarSesion.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         lblCerrarSesion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/src/icons8-logout-30.png"))); // NOI18N

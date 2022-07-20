@@ -55,6 +55,11 @@ public class vis_jif_cliente extends javax.swing.JInternalFrame {
         txt_buscar_cliente = new javax.swing.JTextField();
         btn_buscar_cliente = new javax.swing.JButton();
 
+        setClosable(true);
+        setIconifiable(true);
+        setMaximizable(true);
+        setResizable(true);
+
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel1.setText("Datos de Clientes");
 
@@ -66,7 +71,7 @@ public class vis_jif_cliente extends javax.swing.JInternalFrame {
 
         jLabel5.setText("Estado Civil:");
 
-        cb_tipo_clientes.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4", "b" }));
+        cb_tipo_clientes.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione" }));
         cb_tipo_clientes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cb_tipo_clientesActionPerformed(evt);
@@ -81,7 +86,7 @@ public class vis_jif_cliente extends javax.swing.JInternalFrame {
 
         jLabel8.setText("Tipo de Identificacion:");
 
-        cb_tipo_identificacion_cliente.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cedula", "Pasaporte", "Otros", "a" }));
+        cb_tipo_identificacion_cliente.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione" }));
 
         btn_guardar_cliente.setText("GUARDAR");
 

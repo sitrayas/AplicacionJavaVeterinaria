@@ -4,6 +4,8 @@ import Vista.vis_Principal;
 import Vista.vis_Login;
 import Vista.vis_jif_Pacientes;
 import Vista.vis_jif_cliente;
+import Vista.vis_jif_reportes;
+import Vista.vist_jif_medicamento;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -21,7 +23,9 @@ public class ctrl_Principal implements MouseListener, ActionListener {
         this.principal = principal;
         this.principal.lblPacientes.addMouseListener(this);
         this.principal.lblCliente.addMouseListener(this);
+        this.principal.lblMedicinas.addMouseListener(this);
         this.principal.lblCerrarSesion.addMouseListener(this);
+        this.principal.lblReportes.addMouseListener(this);
     }
 
     @Override
@@ -53,10 +57,28 @@ public class ctrl_Principal implements MouseListener, ActionListener {
                 Logger.getLogger(ctrl_Principal.class.getName()).log(Level.SEVERE, null, ex);
             }
             
+        }else if (e.getSource() == this.principal.lblMedicinas) {
+            try {
+                vist_jif_medicamento v_med = new vist_jif_medicamento();
+                ctrl_medicamento c_med = new ctrl_medicamento (v_med);
+                this.principal.jp_Contenedor.add(v_med);
+                v_med.setVisible(true);
+
+            } catch (SQLException ex) {
+                Logger.getLogger(ctrl_Principal.class.getName()).log(Level.SEVERE, null, ex);
+            } 
+        }else if (e.getSource() == this.principal.lblReportes) {
+            try {
+                vis_jif_reportes v_rep = new vis_jif_reportes();
+            ctrl_reportes c_med = new ctrl_reportes (v_rep);
+            this.principal.jp_Contenedor.add(v_rep);
+            v_rep.setVisible(true);
+            } catch (Exception ev) {
+                
+            }
+
         }
-
     }
-
     @Override
     public void mousePressed(MouseEvent e) {
 
@@ -80,5 +102,4 @@ public class ctrl_Principal implements MouseListener, ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
 
-    }
-}
+        }}
