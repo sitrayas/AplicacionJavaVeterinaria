@@ -88,36 +88,7 @@ public class ctrl_pacientes implements ActionListener{
                   }
                }
            }
-//        }
-//            if (e.getSource()== this.pacientes.btn_eliminar){
-//               try{ 
-//            DefaultTableModel tablapac = (DefaultTableModel) this.pacientes.tabla_pacientes.getModel();
-//            tablapac.setColumnCount(0);
-//            tablapac.setRowCount(0);
-//             tablapac.addColumn("Nombre");
-//            tablapac.addColumn("Edad");
-//            tablapac.addColumn("Sexo");
-//            tablapac.addColumn("Especie");
-//            tablapac.addColumn("Raza");
-//            tablapac.addColumn("Color");
-//            tablapac.addColumn("F.nac");
-//            
-//            ResultSet rs= conexion.eliminar();
-//            String[] regP = new String [7];
-//               
-//             while (rs.next()) {     
-//                regP[0]=rs.getString("pac_nombre");
-//                regP[1]=rs.getString("pac_edad");
-//                regP[2]=rs.getString("pac_sexo");
-//                regP[3]=rs.getString("pac_especie");
-//                regP[4]=rs.getString("pac_raza");
-//                regP[5]=rs.getString("pac_color");
-//                regP[6]=rs.getString("pac_fecha_nac");
-//                tablapac.addRow(regP);
-//            }
-//             } catch (SQLException ex) {
-//                   JOptionPane.showMessageDialog(pacientes, " Error a eliminar paciente");
-//             }
+
             
     
     public void tabla(){

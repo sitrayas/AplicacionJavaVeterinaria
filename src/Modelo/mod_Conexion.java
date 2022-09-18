@@ -12,7 +12,7 @@ public class mod_Conexion {
             //Conectandome a la base de datos
             Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/pvbd",
                     "postgres",
-                    "root");
+                    "postgres");
             return conn;
 
         } catch (SQLException ex) {
